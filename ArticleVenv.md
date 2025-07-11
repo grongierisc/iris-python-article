@@ -114,9 +114,7 @@ You will see the following message:
 ```
 INFO:iris_utils._find_libpyton:Created backup at /opt/intersystems/iris/iris.cpf.0f4a1bebbcd4b436a7e2c83cfa44f515
 INFO:iris_utils._find_libpyton:Created merge file at /opt/intersystems/iris/iris.cpf.python_merge
-
 IRIS Merge of /opt/intersystems/iris/iris.cpf.python_merge into /opt/intersystems/iris/iris.cpf
-IRIS Merge failed
 INFO:iris_utils._find_libpyton:PythonRuntimeLibrary path set to /usr/local/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/Python
 INFO:iris_utils._find_libpyton:PythonPath set to /xxxx/.venv/lib/python3.11/site-packages
 INFO:iris_utils._find_libpyton:PythonRuntimeLibraryVersion set to 3.11
