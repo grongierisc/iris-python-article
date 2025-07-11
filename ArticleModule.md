@@ -44,7 +44,7 @@ That's why you should be careful when importing a script, because it will execut
 
 ### A Module is a Folder with an `__init__.py` File
 
-Wow, and can a folder be a module? Yes, it can!
+Wow, can a folder be a module? Yes, it can!
 
 A folder can be a module if it contains an `__init__.py` file. This file can be empty or contain initialization code for the module.
 
@@ -97,7 +97,9 @@ You can import it like this:
 from my_folder_module import MySubModule, AnotherSubModule
 ```
 
-### sys.path
+You see the subtility? You can import the classes directly from the module without specifying the sub-module, because the `__init__.py` file is executed when you import the module, and it can define what is available in the module's namespace.
+
+## sys.path
 
 When you import a module, Python looks for it in the directories listed in `sys.path`. This is a list of strings that specifies the search path for modules.
 
@@ -108,4 +110,81 @@ import sys
 print(sys.path)
 ```
 
-By 
+By default, it includes the current directory and other various directories depending on your Python installation.
+
+You can also add directories to `sys.path` at runtime, which is useful when you want to import modules from a specific location. For example:
+
+```python
+import sys
+sys.path.append('/path/to/your/module')
+from your_module import YourClass
+```
+
+This is why in the previous article, we added the path to the module before importing it:
+
+```objectscript
+Set sys = ##class(%SYS.Python).Import("sys")
+do sys.path.append("/irisdev/app/src/python/article")
+set my_module = ##class(%SYS.Python).Import("my_module")
+```
+
+### sys.path and the other directories
+
+What are the other directories in `sys.path`? They are usually:
+
+- The directory containing the input script (or the current directory if no script is specified).
+- The standard library directories, which contain the built-in modules that come with Python.
+- **site-packages** directories where third-party packages are installed.
+
+#### site-packages
+
+How site-packages works? When you install a package using pip, it is installed in the `site-packages` directory, which is automatically included in `sys.path`. This allows you to import the package without having to specify its location.
+
+🤨🔍 But how and where the `site-packages` directory are set and by who?
+
+The `site-packages` directory is created during the installation of Python and is typically located in the `lib` directory of your Python installation. The exact location depends on your operating system and how Python was installed.
+
+For example, on a typical Linux installation, the `site-packages` directory might be located at:
+
+```
+/usr/local/lib/python3.x/site-packages
+```
+
+On Windows, it might be located at:
+
+```
+C:\Python3x\Lib\site-packages
+```
+
+When you install a package using `pip`, it is installed in the `site-packages` directory, which is automatically included in `sys.path`. This allows you to import the package without having to specify its location.
+
+```python
+import site
+print(site.getsitepackages())
+```
+
+🤨🔍 When and where python interpreter reads the `site.py` file?
+
+The `site.py` file (which is located in the standard library directory) is executed automatically when the Python interpreter starts. It is responsible for setting up the `site-packages` directory and adding it to `sys.path`. This file is located in the standard library directory of your Python installation.
+
+### sys.path in IRIS
+
+In IRIS, we also have a `site.py` file, which is located in `<installation_directory>/lib/python/iris_site.py`. This file is executed when you start or import aa script/module in IRIS, and it sets up the `sys.path` for you.
+
+Roughly, the `iris_site.py` file does the following:
+- it keeps the default `site-packages` directory
+- it adds the `<installation_directory>/lib/python/` directory to `sys.path`
+  - this is where the IRIS Python modules are located, plz don't put your modules here
+- it adds the `<installation_directory>/mgr/python/` directory to `sys.path`
+  - this is where you can put your custom Python modules
+- it adds the config string PythonPath to `sys.path`
+  - PythonPath can be configured in the IRIS Management Portal or in a merge/cfg file
+  - https://docs.intersystems.com/iris20251/csp/docbook/Doc.View.cls?KEY=GEPYTHON_flexible#GEPYTHON_flexible_overview
+
+## Conclusion
+
+A module can be :
+- a Python file (with or without the `.py` extension)
+- a folder with an `__init__.py` file
+- a Python script (which is also a module)
+- if you can't import a module, check if it is in the `sys.path` list

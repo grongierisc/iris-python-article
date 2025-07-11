@@ -2,13 +2,13 @@
 
 This will be an introduction to Python programming in the context of IRIS.
 
-Before anything i will cover an important topic: **How python works**, this will help you understand some issues and limitations you may encounter when working with Python in IRIS.
+Before anything I will cover an important topic: **How python works**, this will help you understand some issues and limitations you may encounter when working with Python in IRIS.
 
 # How Python works
 
 ## Interpreted Language
 
-Python is an interpreted language, which means that the code is executed line by line at runtime.
+Python is an interpreted language, which means that the code is **executed line by line** at runtime even when you import a script.
 
 What does this mean ? Let's take a look at the following code:
 
@@ -62,7 +62,7 @@ You will see the output:
 Hello, World!
 ```
 
-This is because the Python interpreter executes the code in the `introduction.py` file, defining the function and then **calling it**, just like it would if you ran the script directly **but you are not running you are importing it**.
+This is because the Python interpreter imports the code by interpreting it, first it defines the function and then **calls it**, just like it would if you ran the script directly **but you are not running you are importing it**.
 
 ⚠️ **Important Note**: If you import the script without calling the function, nothing will happen. The function is defined, but it won't execute until you explicitly call it.
 
@@ -118,8 +118,8 @@ You will see no output, because the function is defined but not called.
 
 ## Import caching
 
-When you import a Python script, **the Python interpreter caches the imported module**. 
-This means that if you import the **same module again, it will not re-execute the code** in that module, but will use the cached version.
+When you import a Python script, **the Python interpreter caches the imported script**. 
+This means that if you import the **same script again, it will not re-execute the code** in that script, but will use the cached version.
 
 Demonstration by example:
 
@@ -196,7 +196,7 @@ IRISAPP>do ##class(Article.Introduction2).Run()
 os.foo already exists: bar
 ```
 
-OMG, the `os` module is cached, and the `foo` attribute is not redefined.
+OMG, the `os` module is cached, and the `foo` attribute is not redefined to non existing.
 
 # Conclusion
 
@@ -204,11 +204,12 @@ I hope this introduction helped you understand why when you work with Python in 
 
 Takeway, when working with Python in IRIS:
 - Change everytime the IRIS session to see changes in your Python scripts.
+  - This is not a bug, it's how Python works.
 - Be aware that importing a script executes its code.
 
 # Bonus
 
-Wait ! It doesn't make sense, if you say that when you import a script, it's cached. Why  when I work with the `language tag = python`, when I change the script, it works without changing the IRIS session?
+Wait ! It doesn't make sense, if you say that when you import a script, it's cached. Why when I work with the `language tag = python`, when I change the script, it works without changing the IRIS session?
 
 Good question, this is because the `language tag` is built in a way that everytime you run it, it will read the script again and execute it line by line as it was new lines in an native Python interpreter, `language tag` doesn't import the script, it just executes it as if you were running it directly in a Python interpreter without restarting it.
 
