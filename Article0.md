@@ -4,6 +4,8 @@ This will be an introduction to Python programming in the context of IRIS.
 
 Before anything I will cover an important topic: **How python works**, this will help you understand some issues and limitations you may encounter when working with Python in IRIS.
 
+All the articles and examples can be found in this git repository: [iris-python-article](https://github.com/grongierisc/iris-python-article)
+
 # How Python works
 
 ## Interpreted Language
