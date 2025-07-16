@@ -9,6 +9,7 @@ Dunder methods are special methods in Python that start and end with double unde
 Some common dunder methods include:
 
 - `__init__(self, ...)`: Called when an object is created.
+    - Like our '%OnNew' method in ObjectScript.
 - `__str__(self)`: Called by the `str()` built-in function and `print` to represent the object as a string.
 - `__repr__(self)`: Called by the `repr()` built-in function to represent the object for debugging.
 - `__add__(self, other)`: Called when the `+` operator is used.
@@ -35,13 +36,13 @@ Class Article.DunderExample Extends %RegisteredObject
 
 ClassMethod Run()
 {
-        Set sys = ##class(%SYS.Python).Import("sys")
-        do sys.path.append("/irisdev/app/src/python/article")
-        set dunderExample = ##class(%SYS.Python).Import("dunder_example")
-        set myList = dunderExample."get_list"()
-        for i=0:1:myList."__len__"()-1 {
-            write myList."__getitem__"(i), !
-        }
+    Set sys = ##class(%SYS.Python).Import("sys")
+    do sys.path.append("/irisdev/app/src/python/article")
+    set dunderExample = ##class(%SYS.Python).Import("dunder_example")
+    set myList = dunderExample."get_list"()
+    for i=0:1:myList."__len__"()-1 {
+        write myList."__getitem__"(i), !
+    }
 }
 
 }

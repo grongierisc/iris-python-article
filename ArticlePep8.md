@@ -19,7 +19,7 @@ In a nutshell, PEP 8 provides guidelines and best practices on how to write Pyth
 
 No need to say them all, but keep it in mind that will help you to understand other's code and help others to understand your code ^^.
 
-Also, you may have heard about the words `pythonic`. Following PEP 8 is a way to write Python code that is considered "pythonic" (it's only that that but it's part of it).
+Also, you may have heard about the words `pythonic`. Following PEP 8 is a way to write Python code that is considered "pythonic" (it's not only that but it's part of it).
 
 ## Why PEP 8 is important and relevant to IRIS Python developers?
 
