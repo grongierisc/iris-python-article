@@ -1,5 +1,7 @@
 # Introduction to PEP 8
 
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20pep8.png)
+
 This will be a short article about PEP 8, the Python style guide.
 
 ## What is PEP 8?

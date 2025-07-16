@@ -1,5 +1,7 @@
 # Introduction to Python Programming in an IRIS context
 
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20introducction.png)
+
 This will be an introduction to Python programming in the context of IRIS.
 
 Before anything I will cover an important topic: **How python works**, this will help you understand some issues and limitations you may encounter when working with Python in IRIS.
@@ -112,7 +114,7 @@ iris session iris -U IRISAPP '##class(Article.Introduction1).Run()'
 
 You will see no output, because the function is defined but not called.
 
-🤯 Why this subtility is important ?
+🤯 Why this subtlety is important ?
 
 - When you import a Python script, it executes the code in that script.
   - You may don't want this to happen

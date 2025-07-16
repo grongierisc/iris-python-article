@@ -1,10 +1,13 @@
 # Introduction to Virtual Environments in Python
 
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20venv.png)
+
 This article will introduce you to the concept of virtual environments in Python, which are essential for managing dependencies and isolating project from the OS.
 
 ## What is a Virtual Environment?
 
 A virtual environment is a folder that contains :
+
 - A specific version of Python
 - At start an empty site-packages directory
 

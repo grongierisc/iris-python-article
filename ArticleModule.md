@@ -1,5 +1,7 @@
 # Introduction to Python Modules
 
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20modules.png)
+
 Modules what a topic! We don't have this notion in ObjectScript, but it's a fundamental concept in Python. Let's discover it together.
 
 ## What is a Module?
