@@ -6,3 +6,10 @@ iris-main.log
 .venv
 .venv-iris
 waitISC.log
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints

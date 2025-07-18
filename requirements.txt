@@ -4,3 +4,7 @@ iris-pex-embedded-python>=3.0.0
 iris-embedded-python-wrapper
 pytest
 requests
+intersystems-irispython
+notebook
+ipykernel
+sqlalchemy-iris
