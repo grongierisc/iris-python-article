@@ -1,6 +1,6 @@
 # Introduction to Python in IRIS
 
-![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/main/img/image%20iris%20python%20first.png)
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20iris%20python.png)
 
 Now that we have a good understanding of Python and its features, let's explore how we can leverage Python within IRIS.
 

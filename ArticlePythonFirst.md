@@ -1,8 +1,8 @@
 # Introduction Python First Approach in IRIS
 
-In this section, we will explore how to use Python as the primary language in IRIS, allowing you to write your application logic in Python while still leveraging the power of IRIS.
+![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/master/misc/img/image%20iris%20python%20frist.png)
 
-![img](https://raw.githubusercontent.com/grongierisc/iris-python-article/main/img/image%20iris%20python.png)
+In this section, we will explore how to use Python as the primary language in IRIS, allowing you to write your application logic in Python while still leveraging the power of IRIS.
 
 - [Introduction Python First Approach in IRIS](#introduction-python-first-approach-in-iris)
   - [How to use it (irispython)](#how-to-use-it-irispython)

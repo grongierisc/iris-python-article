@@ -11,3 +11,5 @@ It can be used as a template to follow the articles and run the examples.
 - [Introduction to Virtual Environments in Python](ArticleVenv.md)
 - [Dunder Methods in Python](ArticleDunder.md)
 - [Modules and Packages in Python](ArticleModules.md)
+- [Introduction to Python in IRIS](ArticlePythonInIRIS.md)
+- [Python First Approach in IRIS](ArticlePythonFirst.md)
