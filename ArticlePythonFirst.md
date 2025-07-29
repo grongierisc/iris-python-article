@@ -329,7 +329,7 @@ export IRISNAMESPACE=<namespace>
 Then, you can run your Python code using your native Python interpreter:
 
 ```bash
-python3 -m src/python/article/irispython_example.py
+python3 src/python/article/irispython_example.py
 ```
 
 ```python
@@ -532,10 +532,27 @@ iris session iris -U IRISAPP '##class(Article.DebuggingExample).Run()'
 
 You can then set breakpoints in your Python code, and the debugger will stop at those breakpoints, allowing you to inspect variables and step through the code.
 
+Video of remote debugging in action (for IoP but the concept is the same):
+
+<video controls width="640" height="360">
+  <source src="https://grongierisc.github.io/interoperability-embedded-python/img/IoPRemoteDebug.mp4" type="video/mp4">
+</video>
+
+And you have also tracebacks in your Python code, which is very useful for debugging.
+
+With tracebacks enabled: 
+
+![Traceback enabled](https://grongierisc.github.io/interoperability-embedded-python/img/traceback_enable.png)
+
+With tracebacks disabled:
+
+![Traceback disabled](https://grongierisc.github.io/interoperability-embedded-python/img/traceback_disable.png)
+
 ### Pros
 
 - **Remote Debugging**: You can debug Python code running in IRIS remotely, which is IMO a game changer.
 - **Python Debugging Features**: You can use all the Python debugging features, such as breakpoints, variable inspection, and stepping through code.
+- **Tracebacks**: You can see the full traceback of errors in your Python code, which is very useful for debugging.
 
 ### Cons
 
@@ -557,6 +574,7 @@ Key points of IoP:
 - **Python First**: You can write your application logic in Python, which allows you to leverage Python's features and libraries.
 - **IRIS Integration**: You can easily integrate your Python code with IRIS features and functionality.
 - **Remote Debugging**: You can debug your Python code running in IRIS remotely.
+- **Tracebacks**: You can see the full traceback of errors in your Python code, which is very useful for debugging.
 - **Virtual Environments**: You have a support of virtual environments, allowing you to manage dependencies more easily.
 
 To learn more about IoP, you can check the [official documentation](https://grongierisc.github.io/interoperability-embedded-python/).
@@ -567,6 +585,10 @@ Then you can read those articles to learn more about IoP:
 - [iop command line](https://community.intersystems.com/post/iris-interoperability-command-line-interface-iop)
 - [async support](https://community.intersystems.com/post/interoperability-python-update-async-support)
 - [dtl and jsonschema support](https://community.intersystems.com/post/iop-dtl-support-messsages-and-jsonschema)
+
+🐍❤️ As you can see, IoP provides a powerful way to integrate Python with IRIS, making it easier to develop and debug your applications.
+
+You don't need to use `irispython` anymore, you don't have to set your `sys.path` manually, you can use virtual environments, and you can debug your Python code running in IRIS.
 
 # Conclusion
 
